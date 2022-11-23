@@ -1,4 +1,5 @@
 const express = require("express");
+//const react = require("react");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
@@ -24,3 +25,6 @@ app.use("/api/users", userRoute);
 app.listen(process.env.PORT || 3000, () => {
     console.log("Backend server is running!");
 });
+
+//"start": "nodemon index.js",
+//"start": "react-scripts start",
