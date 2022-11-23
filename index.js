@@ -22,9 +22,11 @@ app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log("Backend server is running!");
-});
+// app.listen(process.env.PORT || 3000, () => {
+//     console.log("Backend server is running!");
+// });
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => console.info (`Server has started on ${PORT}`))
 
 //"start": "nodemon index.js",
 //"start": "react-scripts start",
