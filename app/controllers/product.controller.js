@@ -14,6 +14,7 @@ exports.getAllProducts = (req, res) =>{
 		   		return {
 		   			id:doc.id,
 		   			title:doc.title,
+
 					desc:doc.desc,
 		   			price:doc.price,
 					img: doc.img,
@@ -101,7 +102,9 @@ exports.getProduct = (req,res)=>{
 
 				product:{
 					id:doc.id,
+
 		   			title:doc.title,
+
 					desc:doc.desc,
 		   			price:doc.price,
 					img: doc.img,
