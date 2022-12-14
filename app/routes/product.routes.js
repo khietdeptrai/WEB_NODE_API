@@ -16,10 +16,10 @@ module.exports = function(app){
      * @apiParam {string} productId ID of product, on params
      *
      * @apiExample Example usage:
-     * curl -i https://jewelstore.onrender.com/api/products/637a316c457d58c281b4bb3a 
+     * curl -i https://motorshop-85ou.onrender.com/api/products
      *
      * @apiSuccess {String} _id the id of product
-     * @apiSuccess {String} name name of product
+     * @apiSuccess {String} title title of product
      * @apiSuccess {Number} price price of product
      * @apiSuccess {String} material material of product
      * @apiSuccess {String} img image of product
