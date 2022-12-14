@@ -13,7 +13,8 @@ exports.getAllProducts = (req, res) =>{
 		   	products:docs.map((doc)=>{
 		   		return {
 		   			id:doc.id,
-		   			title:doc.tittle,
+		   			title:doc.title,
+
 					desc:doc.desc,
 		   			price:doc.price,
 					img: doc.img,
@@ -101,7 +102,9 @@ exports.getProduct = (req,res)=>{
 
 				product:{
 					id:doc.id,
-		   			title:doc.tittle,
+
+		   			title:doc.title,
+
 					desc:doc.desc,
 		   			price:doc.price,
 					img: doc.img,
