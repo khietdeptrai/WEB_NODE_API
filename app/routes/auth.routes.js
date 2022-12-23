@@ -76,8 +76,8 @@ module.exports = function(app) {
      *
      * @apiDescription login and get access token
      *
-     * @apiBody {string} username=admin a string with length <= 10
-     * @apiBody {String} password=123456789 a string with 4 < length < 64
+     * @apiBody {string} username=hung a string with unlimited length
+     * @apiBody {String} password=123456789 a string with 8 < length < 20
      *
      * @apiExample Example usage:
      * curl -i https://motorshop-85ou.onrender.com/api/auth/signin
@@ -89,8 +89,8 @@ module.exports = function(app) {
      *     HTTP/1.1 200 OK
      *     {
      *       "id": "1",
-     *       "username": "hungtang",
-     *       "email": "tangquochungx1@gmail.com",
+     *       "username": "hung",
+     *       "email": "ab@gmail.com",
      *       "roles": [
      *          "ROLE_USER"
      *       ],
