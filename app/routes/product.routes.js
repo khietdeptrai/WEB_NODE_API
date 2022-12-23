@@ -86,10 +86,11 @@ module.exports = function(app){
      *
      * @apiDescription add product
      *
-     * @apiBody {String} name Name of user
-     * @apiBody {Number} price Price of product
-     * @apiBody {Number} material Material of Product
-     * @apiBody {String} desc Desc of product
+     * @apiBody {String} [Title] Title of product 
+     * @apiBody {Number} [Price] Price of product 
+     * @apiBody {Number} [Color] Color of Product 
+     * @apiBody {String} [des] des of product 
+     * @apiBody {String} [img] img of product
      *
      * @apiExample Example usage:
      * curl -H "x-access-token: abc" -i  https://motorshop-85ou.onrender.com/api/manage/products
@@ -121,10 +122,11 @@ module.exports = function(app){
      *
      * @apiParam {string} productId ID of product, on params
      * 
-     * @apiBody {String} [ProName] Name of user 
+     * @apiBody {String} [Title] Title of product 
      * @apiBody {Number} [Price] Price of product 
-     * @apiBody {Number} [Material] Material of Product 
+     * @apiBody {Number} [Color] Color of Product 
      * @apiBody {String} [des] des of product 
+     * @apiBody {String} [img] img of product
      *
      * @apiExample Example usage:
      * curl -H "x-access-token: abc"-i  https://motorshop-85ou.onrender.com/api/manage/products/63996fb5bf161442415fc18f

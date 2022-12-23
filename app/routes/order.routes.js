@@ -16,7 +16,7 @@ module.exports = function(app){
      *
      *
      * @apiExample Example usage:
-     * curl -H "x-access-token:abc" -i  https://jewelstore.onrender.com/api/orders
+     * curl -H "x-access-token:abc" -i  https://motorshop-85ou.onrender.com/api/orders
      *
      * @apiSuccess {Number} count number of orders
      * @apiSuccess {Array} orders list product of orders
@@ -54,7 +54,7 @@ module.exports = function(app){
      *       "message": "invalid input"
      *     }
      * 
-     * @apiSampleRequest https://jewelstore.onrender.com/api/orders
+     * @apiSampleRequest https://motorshop-85ou.onrender.com/api/orders
      */
     app.get("/api/orders", auth.verifyToken, controller.getOrders)
 
@@ -71,7 +71,7 @@ module.exports = function(app){
      * @apiParam {string} orderId ID of order, on params
      * 
      * @apiExample Example usage:
-     * curl -H "x-access-token:abc" -i https://jewelstore.onrender.com/api/orders/637b88bbe3e57de695500898
+     * curl -H "x-access-token:abc" -i https://motorshop-85ou.onrender.com/api/orders/637b88bbe3e57de695500898
      *
      * @apiSuccess {String} _id the ID of orders
      * @apiSuccess {Object} product product data
@@ -104,7 +104,7 @@ module.exports = function(app){
      *       "message": "invalid input"
      *     }
      * 
-     * @apiSampleRequest https://jewelstore.onrender.com/api/orders/:orderId
+     * @apiSampleRequest https://motorshop-85ou.onrender.com/api/orders/:orderId
      */
     
     app.get("/api/orders/:orderId", auth.verifyToken, controller.getOrder)
@@ -125,7 +125,7 @@ module.exports = function(app){
      * @apiBody {Number} quantity quantity of the product
      * 
      * @apiExample Example usage:
-     * curl -H "x-access-token:abc"-i  https://jewelstore.onrender.com/api/orders/
+     * curl -H "x-access-token:abc"-i  https://motorshop-85ou.onrender.com/api/orders/
      *
      * @apiSuccess {String} _id the ID of orders
      * @apiSuccess {String} productId the ID of product
@@ -153,7 +153,7 @@ module.exports = function(app){
      *       "message": "invalid input"
      *     }
      * 
-     * @apiSampleRequest https://jewelstore.onrender.com/api/orders
+     * @apiSampleRequest https://motorshop-85ou.onrender.com/api/orders
      */
     app.post("/api/orders", auth.verifyToken, controller.postOrder)
     
@@ -172,7 +172,7 @@ module.exports = function(app){
      * @apiBody {Number} quantity Number of product
      *
      * @apiExample Example usage:
-     * curl -H "x-access-token: abc"-i  https://jewelstore.onrender.com/api/api/orders/637a316c457d58c281b4bb3a
+     * curl -H "x-access-token: abc"-i  https://motorshop-85ou.onrender.com/api/api/orders/637a316c457d58c281b4bb3a
      *
      * @apiError invalid input data
      *
@@ -183,7 +183,7 @@ module.exports = function(app){
      *       "message": "invalid input"
      *     }
      * 
-     * @apiSampleRequest https://jewelstore.onrender.com/api/orders/:orderId
+     * @apiSampleRequest https://motorshop-85ou.onrender.com/api/orders/:orderId
      */
     app.patch("/api/orders/:orderId", auth.verifyToken, controller.updateOrder)
     
@@ -200,7 +200,7 @@ module.exports = function(app){
      * @apiParam {string} orderId ID of order, on params
      * 
      * @apiExample Example usage:
-     * curl -H "x-access-token:abc" -i  https://jewel-store-pj.herokuapp.com/api/orders/
+     * curl -H "x-access-token:abc" -i  https://motorshop-85ou.onrender.com/api/orders/
      *
      * @apiSuccess {String} _id the ID of orders
      * 
@@ -223,7 +223,7 @@ module.exports = function(app){
      *       "result":"fail",
      *       "message": "invalid input"
      *     }
-     * @apiSampleRequest https://jewel-store-pj.herokuapp.com/api/orders/:orderId
+     * @apiSampleRequest https://motorshop-85ou.onrender.com/api/orders/:orderId
      */
     app.delete("/api/orders/:orderId", auth.verifyToken, controller.deleteOrder)
 }
