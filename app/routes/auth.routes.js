@@ -29,7 +29,7 @@ module.exports = function(app) {
      * @apiBody {String} password a string with 6 <= length <= 64
      *
      * @apiExample Example usage:
-     * curl -i https://jewelstore.onrender.com/api/auth/signup
+     * curl -i https://motorshop-85ou.onrender.com/api/auth/signup
      *
      * @apiSuccess {String} message registered successfully
      * @apiSuccessExample Success-Response:
@@ -54,7 +54,7 @@ module.exports = function(app) {
      *        "Failed! Email is already in use!,
      *      }
      *
-     *@apiSampleRequest https://jewelstore.onrender.com/api/auth/signup
+     *@apiSampleRequest https://motorshop-85ou.onrender.com/api/auth/signup
      */
   app.post(
     "/api/auth/signup",
@@ -80,7 +80,7 @@ module.exports = function(app) {
      * @apiBody {String} password=123456789 a string with 4 < length < 64
      *
      * @apiExample Example usage:
-     * curl -i https://jewelstore.onrender.com/api/auth/signin
+     * curl -i https://motorshop-85ou.onrender.com/api/auth/signin
      *
      * @apiSuccess {object} data the user data with accessToken
      * @apiSuccess {array} roles of user
@@ -89,8 +89,8 @@ module.exports = function(app) {
      *     HTTP/1.1 200 OK
      *     {
      *       "id": "1",
-     *       "username": "hieunguyen",
-     *       "email": "trunghieu180501@gmail.com",
+     *       "username": "hungtang",
+     *       "email": "tangquochungx1@gmail.com",
      *       "roles": [
      *          "ROLE_USER"
      *       ],
@@ -114,7 +114,7 @@ module.exports = function(app) {
      *      }
      * 
      * 
-     * @apiSampleRequest https://jewelstore.onrender.com/api/auth/signin
+     * @apiSampleRequest https://motorshop-85ou.onrender.com/api/auth/signin
      */
   app.post("/api/auth/signin", controller.signin);
 

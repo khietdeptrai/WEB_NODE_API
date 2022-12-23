@@ -16,7 +16,7 @@ module.exports = function(app){
      * @apiParam {string} productId ID of product, on params
      *
      * @apiExample Example usage:
-     * curl -i https://motorshop-85ou.onrender.com/api/products
+     * curl -i https://motorshop-85ou.onrender.com/api/products/63996fb5bf161442415fc18f
      *
      * @apiSuccess {String} _id the id of product
      * @apiSuccess {String} title title of product
@@ -44,7 +44,7 @@ module.exports = function(app){
      *       "message": "",
      *     }
      * 
-     * @apiSampleRequest https://jewelstore.onrender.com/api/products/:productId
+     * @apiSampleRequest https://motorshop-85ou.onrender.com/api/products/:productId
      */
     app.get("/api/products/:productId", controller.getProduct);
 
@@ -58,7 +58,7 @@ module.exports = function(app){
      * @apiDescription List all of product
      *
      * @apiExample Example usage:
-     * curl -i https://jewelstore.onrender.com/api/products 
+     * curl -i https://motorshop-85ou.onrender.com/api/products
      *
      * @apiSuccess {Number} count the number of product
      * @apiSuccess {Array} products list data of product
@@ -72,7 +72,7 @@ module.exports = function(app){
      *       "message": "",
      *     }
      * 
-     *  @apiSampleRequest https://jewelstore.onrender.com/api/products
+     *  @apiSampleRequest https://motorshop-85ou.onrender.com/api/products
      */
     app.get("/api/products",controller.getAllProducts);
 
@@ -92,7 +92,7 @@ module.exports = function(app){
      * @apiBody {String} desc Desc of product
      *
      * @apiExample Example usage:
-     * curl -H "x-access-token: abc" -i  https://jewelstore.onrender.com/api/manage/products
+     * curl -H "x-access-token: abc" -i  https://motorshop-85ou.onrender.com/api/manage/products
      *
      * @apiSuccess {Object} createdProduct information of product
      *
@@ -105,7 +105,7 @@ module.exports = function(app){
      *       "message": "invalid input"
      *     }
      * 
-     * @apiSampleRequest https://jewelstore.onrender.com/api/manage/products
+     * @apiSampleRequest https://motorshop-85ou.onrender.com/api/manage/products
      */
     app.post("/api/manage/products",controller.postNewProduct);
     
@@ -127,7 +127,7 @@ module.exports = function(app){
      * @apiBody {String} [des] des of product 
      *
      * @apiExample Example usage:
-     * curl -H "x-access-token: abc"-i  https://jewelstore.onrender.com/api/manage/products/637a316c457d58c281b4bb3a
+     * curl -H "x-access-token: abc"-i  https://motorshop-85ou.onrender.com/api/manage/products/63996fb5bf161442415fc18f
      *
      * @apiSuccess {Object} createdProduct information of product
      * @apiError invalid input data
@@ -139,7 +139,7 @@ module.exports = function(app){
      *       "message": "invalid input"
      *     }
      * 
-     * @apiSampleRequest https://jewelstore.onrender.com/api/manage/products/:productId
+     * @apiSampleRequest https://motorshop-85ou.onrender.com/api/manage/products/:productId
      */
     app.patch("/api/manage/products/:productId",[auth.verifyToken, auth.isModerator], controller.updateProduct);
 
@@ -159,7 +159,7 @@ module.exports = function(app){
      * @apiBody {File} [img] image of product 
      *
      * @apiExample Example usage:
-     * curl -H "x-access-token: abc"-i  https://jewelstore.onrender.com/api/manage/products/img/637a316c457d58c281b4bb3a
+     * curl -H "x-access-token: abc"-i  https://motorshop-85ou.onrender.com/api/manage/products/img/63996fb5bf161442415fc18f
      *
      * @apiSuccess {Object} createdProduct information of product
      *
@@ -172,7 +172,7 @@ module.exports = function(app){
      *       "message": "invalid input"
      *     }
      * 
-     * @apiSampleRequest https://jewelstore.onrender.com/api/manage/products/img/:productId
+     * @apiSampleRequest https://motorshop-85ou.onrender.com/api/manage/products/img/:productId
      */
     const multer = require('multer');
     const storage = multer.diskStorage({});
@@ -200,14 +200,14 @@ module.exports = function(app){
      * @apiParam {string} productId ID of product, on params
      *
      * @apiExample Example usage:
-     * curl -H "x-access-token:abc" -i  https://jewelstore.onrender.com/api/manage/products/637a316c457d58c281b4bb3a
+     * curl -H "x-access-token:abc" -i  https://motorshop-85ou.onrender.com/api/manage/products/63996fb5bf161442415fc18f
      *
      * @apiSuccess {String} _id Id of deleted product
      * @apiSuccessExample Success-Response:
      *     HTTP/1.1 200 OK
      *     {
      *          "data"{
-     *                "_id": "637b67b0ae7df78fd496a6dc",
+     *                "_id": "63996fb5bf161442415fc18f",
      *          }
      *          "message":"Product Delete Successfully"
      *     }
@@ -221,7 +221,7 @@ module.exports = function(app){
      *       "message": "invalid input"
      *     }
      * 
-     *  @apiSampleRequest https://jewelstore.onrender.com/api/manage/products/:productId
+     *  @apiSampleRequest https://motorshop-85ou.onrender.com/api/manage/products/:productId
      */
     app.delete("/api/manage/products/:productId",[auth.verifyToken, auth.isModerator], controller.deleteProduct);
 };

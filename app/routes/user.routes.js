@@ -15,9 +15,9 @@ module.exports = function(app) {
      * 
      *
      * @apiExample Example usage:
-     * curl -i https://jewelstore.onrender.com/api/user
+     * curl -i https://motorshop-85ou.onrender.com/api/user
      *
-     * @apiSampleRequest https://jewelstore.onrender.com/api/user
+     * @apiSampleRequest https://motorshop-85ou.onrender.com/api/user
      */
     app.get("/api/user", auth.verifyToken, controller.getUser);
 
@@ -39,7 +39,7 @@ module.exports = function(app) {
      * @apiBody {String} [contact] Contact of user 
      *
      * @apiExample Example usage:
-     * curl -H "x-access-token: abc"-i  https://jewelstore.onrender.com/api/manage/products/637a316c457d58c281b4bb3a
+     * curl -H "x-access-token: abc"-i  https://motorshop-85ou.onrender.com/api/manage/products/63996fb5bf161442415fc18f
      *
      * @apiError invalid input data
      *
@@ -50,7 +50,7 @@ module.exports = function(app) {
      *       "message": "invalid input"
      *     }
      * 
-     * @apiSampleRequest https://jewelstore.onrender.com/api/user
+     * @apiSampleRequest https://motorshop-85ou.onrender.com/api/user
      */
     app.patch("/api/user", auth.verifyToken, controller.updateInformation);
 }
