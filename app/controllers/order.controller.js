@@ -18,7 +18,6 @@ exports.getOrders = (req, res)=>{
                 } 
             })
         }
-    
         res.status(200).json(response)
     })
     .catch(err=>{

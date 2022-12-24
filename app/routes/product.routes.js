@@ -21,7 +21,7 @@ module.exports = function(app){
      * @apiSuccess {String} _id the id of product
      * @apiSuccess {String} title title of product
      * @apiSuccess {Number} price price of product
-     * @apiSuccess {String} material material of product
+     * @apiSuccess {String} categories categories of product
      * @apiSuccess {String} img image of product
      * @apiSuccess {String} desc desc of product
      * 
@@ -88,7 +88,7 @@ module.exports = function(app){
      *
      * @apiBody {String} name Name of user
      * @apiBody {Number} price Price of product
-     * @apiBody {Number} material Material of Product
+     * @apiBody {Number} categories Categories of Product
      * @apiBody {String} desc Desc of product
      *
      * @apiExample Example usage:
@@ -123,7 +123,7 @@ module.exports = function(app){
      * 
      * @apiBody {String} [ProName] Name of user 
      * @apiBody {Number} [Price] Price of product 
-     * @apiBody {Number} [Material] Material of Product 
+     * @apiBody {Number} [Categories] Categories of Product 
      * @apiBody {String} [des] des of product 
      *
      * @apiExample Example usage:
