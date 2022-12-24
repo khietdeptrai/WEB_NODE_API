@@ -20,14 +20,12 @@ module.exports = function(app){
      *
      * @apiSuccess {String} _id the id of product
      * @apiSuccess {String} title title of product
+     * @apiSuccess {String} color color of product
      * @apiSuccess {Number} price price of product
-     * @apiSuccess {String} material material of product
-     * @apiSuccess {String} img image of product
      * @apiSuccess {String} desc desc of product
-     * 
-     * 
+     * @apiSuccess {String} img image of product
+     * @apiSuccess {Array} categories categories of product
      *
-     * @apiError Not found product
      * 
      * @apiErrorExample Error-Response:
      *    HTTP/1.1 404 Not Found
@@ -86,12 +84,16 @@ module.exports = function(app){
      *
      * @apiDescription add product
      *
-     * @apiBody {String} [Title] Title of product 
-     * @apiBody {Number} [Price] Price of product 
-     * @apiBody {Number} [Color] Color of Product 
-     * @apiBody {String} [des] des of product 
+     * @apiBody {String} [title] Title of product 
+     * @apiBody {String} [color] Color of Product 
+     * @apiBody {Number} [price] Price of product      * 
+     * @apiBody {String} [desc] desc of product 
      * @apiBody {String} [img] img of product
-     *
+     * @apiBody {Array} [categories] categories of product
+     * 
+     * 
+     * @apiError Not found product
+     * 
      * @apiExample Example usage:
      * curl -H "x-access-token: abc" -i  https://motorshop-85ou.onrender.com/api/manage/products
      *
@@ -122,12 +124,15 @@ module.exports = function(app){
      *
      * @apiParam {string} productId ID of product, on params
      * 
-     * @apiBody {String} [Title] Title of product 
-     * @apiBody {Number} [Price] Price of product 
-     * @apiBody {Number} [Color] Color of Product 
-     * @apiBody {String} [des] des of product 
+     * @apiBody {String} [title] Title of product 
+     * @apiBody {String} [color] Color of Product
+     * @apiBody {Number} [price] Price of product      *  
+     * @apiBody {String} [desc] desc of product 
      * @apiBody {String} [img] img of product
-     *
+     * @apiSuccess {Array} [categories] categories of product
+     * 
+     *  
+     * 
      * @apiExample Example usage:
      * curl -H "x-access-token: abc"-i  https://motorshop-85ou.onrender.com/api/manage/products/63996fb5bf161442415fc18f
      *

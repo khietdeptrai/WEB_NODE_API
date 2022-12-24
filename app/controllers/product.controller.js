@@ -14,11 +14,11 @@ exports.getAllProducts = (req, res) =>{
 		   		return {
 		   			id:doc.id,
 		   			title:doc.title,
+					color: doc.color,
+					price:doc.price,
 					desc:doc.desc,
-		   			price:doc.price,
 					img: doc.img,
 					categories: doc.categories,
-					color: doc.color,
 		   		}
 		   	})
 		}
@@ -34,11 +34,11 @@ exports.getAllProducts = (req, res) =>{
 exports.postNewProduct = (req,res)=>{
 	const product = new Product({
 		title : req.body.title,
-		price : req.body.price,
-		categories : req.body.categories,
+		color : req.body.color,
+		price : req.body.price,		
 		desc : req.body.desc,
 		img : req.body.img,
-		color : req.body.color
+		categories : req.body.categories,
 	});
 
 	product.save()
@@ -47,12 +47,12 @@ exports.postNewProduct = (req,res)=>{
 			message : 'Product Created Successfully!!',
 			createdProduct:{
 				id:result.id,
+				color:result.color,
 				title:result.title,
-				price:result.price,
-                categories:result.categories,
+				price:result.price,               
                 desc:result.desc,
 				img:result.img,
-				color:result.color
+				categories:result.categories,
 			}
 		});
 	})
@@ -102,11 +102,11 @@ exports.getProduct = (req,res)=>{
 				product:{
 					id:doc.id,
 		   			title:doc.title,
-					desc:doc.desc,
+					color: doc.color,					
 		   			price:doc.price,
+					desc:doc.desc,
 					img: doc.img,
 					categories: doc.categories,
-					color: doc.color,
 				}
 		   	});
 		}
