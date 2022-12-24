@@ -6,7 +6,7 @@
   "scripts": {
     "test": "nodemon ./server.js",
     "start": "node ./server.js",
-    "apidoc": "apidoc -i ./app/routes -o abc"
+    "apidoc": "apidoc -i ./app/routes -o apidoc"
   },
   "author": "kazz",
   "license": "ISC",
